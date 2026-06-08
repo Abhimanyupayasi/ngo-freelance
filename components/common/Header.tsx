@@ -181,7 +181,7 @@ export default function Header() {
                         transition
                       "
                     >
-                      {item}
+                      {item.name}
                     </a>
                   ))}
                 </div>
