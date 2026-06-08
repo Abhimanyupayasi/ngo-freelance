@@ -1,8 +1,11 @@
+import ProgramsPage from "@/components/ProgramsPage"
 
 
 function page() {
   return (
-    <div>programs page</div>
+    <div>
+      <ProgramsPage/>
+    </div>
   )
 }
 
