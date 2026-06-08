@@ -59,7 +59,7 @@ export default function Footer() {
         </section>
 
         {/* Large Quote */}
-        <section className="py-20 border-t border-zinc-200">
+        {/* <section className="py-20 border-t border-zinc-200">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -78,7 +78,7 @@ export default function Footer() {
             Every action creates change.
             Every donation creates opportunity.
           </motion.p>
-        </section>
+        </section> */}
 
         {/* Footer Grid */}
         <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 py-20 border-t border-zinc-200">

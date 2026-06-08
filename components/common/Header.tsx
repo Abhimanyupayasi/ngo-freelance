@@ -9,10 +9,10 @@ import {
 } from "@heroicons/react/24/outline";
 
 const navLinks = [
-  "Programs",
-  "Blog & Advocacy",
-  "Stories",
-  "Contact",
+  { name: "Programs", href: "/programs" },
+  { name: "About Us", href: "/about-us" },
+  { name: "Stories", href: "/blogs" },
+  { name: "Contact", href: "/contact-us" },
 ];
 
 export default function Header() {
@@ -53,23 +53,23 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-10">
-              {navLinks.map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="
-                    text-xs
-                    font-semibold
-                    uppercase
-                    tracking-wider
-                    transition
-                    hover:text-[#FF6A1C]
-                  "
-                >
-                  {item}
-                </a>
-              ))}
-            </nav>
+  {navLinks.map((item) => (
+    <a
+      key={item.name}
+      href={item.href}
+      className="
+        text-xs
+        font-semibold
+        uppercase
+        tracking-wider
+        transition
+        hover:text-[#FF6A1C]
+      "
+    >
+      {item.name}
+    </a>
+  ))}
+</nav>
 
             {/* Desktop Actions */}
             <div className="hidden sm:flex items-center gap-4">
@@ -168,8 +168,8 @@ export default function Header() {
                 <div className="flex flex-col">
                   {navLinks.map((item) => (
                     <a
-                      key={item}
-                      href="#"
+                      key={item.name}
+                      href={item.href}
                       onClick={() => setOpen(false)}
                       className="
                         py-5
@@ -181,7 +181,7 @@ export default function Header() {
                         transition
                       "
                     >
-                      {item}
+                      {item.name}
                     </a>
                   ))}
                 </div>

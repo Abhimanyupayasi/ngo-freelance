@@ -25,9 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${inter.variable}`}
+        className={`${poppins.variable} ${inter.variable} bg-[#FAF8F5] text-zinc-900 overflow-hidden`}
       >
         <div className="bg-[#FAF8F5] text-zinc-900 overflow-hidden">
            <Header />
